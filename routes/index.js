@@ -1,9 +1,8 @@
 import { Router } from "express";
+import root from "../controllers/index.js";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.send("Frank Herbert");
-});
+router.get("/", root);
 
 export default router;
