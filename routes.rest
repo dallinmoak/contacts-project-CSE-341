@@ -13,4 +13,4 @@ GET {{prodHost}}/
 ###
 GET {{prodHost}}/contacts
 ###
-GET {{devHost}}/contacts/6636ff3e20d7c2f2eeea8612
+GET {{prodHost}}/contacts/6636ff3e20d7c2f2eeea8612
