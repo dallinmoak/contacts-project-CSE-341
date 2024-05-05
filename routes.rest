@@ -1,0 +1,16 @@
+
+@devHost = http://localhost:3000
+@prodHost = https://contacts-project-cse-341.onrender.com
+GET {{devHost}}/
+###
+GET {{devHost}}/contacts
+###
+GET {{devHost}}/contacts/6636ff3e20d7c2f2eeea8612
+###
+
+
+GET {{prodHost}}/
+###
+GET {{prodHost}}/contacts
+###
+GET {{devHost}}/contacts/6636ff3e20d7c2f2eeea8612
