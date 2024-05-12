@@ -55,5 +55,5 @@ content-type: application/json
   "email":"jane.new@doe.test"
 }
 ###
-DELETE {{devHost}}/contacts/6640273700ae5e998a2972c1
+DELETE {{prodHost}}/contacts/66404890018f290a7c9a7971
 ###
