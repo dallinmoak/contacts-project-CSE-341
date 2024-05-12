@@ -41,7 +41,7 @@ export const updateContact = async (req, res) => {
       req.body,
       { new: true }
     ).exec();
-    res.status(200).json(updatedContact);
+    res.status(204).json(updatedContact);
   } catch (e) {
     res.status(500).json(e);
     console.log(e);
