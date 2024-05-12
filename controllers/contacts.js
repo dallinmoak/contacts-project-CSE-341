@@ -47,3 +47,15 @@ export const updateContact = async (req, res) => {
     console.log(e);
   }
 };
+
+export const deleteContact = async (req, res) => {
+  try {
+    const deletedContact = await Contact.findByIdAndDelete(
+      req.params.id
+    ).exec();
+    res.status(200).json(deletedContact);
+  } catch (e) {
+    res.status(500).json(e);
+    console.log(e);
+  }
+};
