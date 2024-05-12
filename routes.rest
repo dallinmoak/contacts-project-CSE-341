@@ -1,12 +1,33 @@
 
 @devHost = http://localhost:3000
 @prodHost = https://contacts-project-cse-341.onrender.com
+
 GET {{devHost}}/
 ###
 GET {{devHost}}/contacts
 ###
 GET {{devHost}}/contacts/6636ff3e20d7c2f2eeea8612
 ###
+POST {{devHost}}/contacts HTTP/1.1
+content-type: application/json
+
+{
+  "first_name":"Jane",
+  "last_name":"Doe",
+  "email":"jane@doe.test"
+}
+###
+PUT {{devHost}}/contacts/663ff5c0f6965541faf4a63e HTTP/1.1
+content-type: application/json
+
+{
+  "first_name":"Jane",
+  "last_name":"Doe",
+  "email":"jane.new@doe.test"
+}
+###
+
+
 
 
 GET {{prodHost}}/
@@ -14,3 +35,22 @@ GET {{prodHost}}/
 GET {{prodHost}}/contacts
 ###
 GET {{prodHost}}/contacts/6636ff3e20d7c2f2eeea8612
+###
+POST {{prodHost}}/contacts HTTP/1.1
+content-type: application/json
+
+{
+  "first_name":"Jane",
+  "last_name":"Doe",
+  "email":"jane@doe.test"
+}
+###
+PUT {{prodHost}}/contacts/663ff5c0f6965541faf4a63e HTTP/1.1
+content-type: application/json
+
+{
+  "first_name":"Jane",
+  "last_name":"Doe",
+  "email":"jane.new@doe.test"
+}
+###

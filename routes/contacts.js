@@ -1,9 +1,11 @@
 import { Router } from "express";
-import { getAllContacts, getOneContact } from "../controllers/contacts.js";
+import * as contactController from "../controllers/contacts.js";
 
 const contactRoutes = Router();
 
-contactRoutes.get("/contacts", getAllContacts);
-contactRoutes.get("/contacts/:id", getOneContact);
+contactRoutes.get("/contacts", contactController.getAllContacts);
+contactRoutes.get("/contacts/:id", contactController.getOneContact);
+contactRoutes.post("/contacts", contactController.createContact);
+contactRoutes.put("/contacts/:id", contactController.updateContact);
 
 export default contactRoutes;
