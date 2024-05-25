@@ -1,24 +1,6 @@
 import swaggerAutogen from "swagger-autogen";
 import "dotenv/config";
 
-// import Contact from "./models/contacts.js";
-// import m2s from "mongoose-to-swagger";
-
-// const contactsFormatted = m2s(Contact);
-// console.log(contactsFormatted);
-// console.log(Contact);
-
-// {
-//   title: 'Contact',
-//   required: [ 'first_name', 'last_name', 'email' ],
-//   properties: {
-//     first_name: { type: 'string' },
-//     last_name: { type: 'string' },
-//     email: { type: 'string' },
-//     _id: { type: 'string' }
-//   }
-// }
-
 const doc = {
   info: {
     version: "0.0.1",
