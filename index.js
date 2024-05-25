@@ -8,8 +8,12 @@ import cors from "cors";
 const app = express();
 connect().catch((e) => console.log(e));
 app.use(bodyParser.json()).use(cors()).use(router);
-const server = app.listen(3000, () => {
-  console.log("listening");
+const server = app.listen(process.env.PORT || 3000, () => {
+  console.log(
+    `Server is running at http${
+      process.env.NODE_ENV == "production" ? "s" : ""
+    }://${process.env.HOST}:${process.env.PORT || 3000}...`
+  );
 });
 
 // gracefully shutdown if nodemon restarts, nodemon keeps failing to close the server before attempting to restart
